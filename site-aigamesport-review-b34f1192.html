@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏体育 · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #faf6ef;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        a {
+            color: #8b5a2b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #8b5a2b;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            background: #ffffffdd;
+            backdrop-filter: blur(4px);
+            border-radius: 48px;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e6ddd0;
+        }
+        .nav-brand {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: #5e4d3a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+        .nav-links a {
+            color: #5e4d3a;
+            border-bottom: none;
+            padding: 0.2rem 0;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8b5a2b;
+            transition: width 0.25s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 3.5rem;
+            padding: 1.5rem 0 2rem;
+            border-bottom: 1px solid #e2d6c4;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            color: #3a322a;
+            margin-bottom: 0.75rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            max-width: 720px;
+            color: #4f4940;
+        }
+
+        /* 卡片 / 引用块 / 提示框 通用样式 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin: 2.5rem 0;
+        }
+        .scenario-card {
+            background: #ffffff;
+            padding: 1.8rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #ede6db;
+            transition: box-shadow 0.2s;
+        }
+        .scenario-card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .scenario-card h3 {
+            font-weight: 500;
+            font-size: 1.35rem;
+            color: #4a3f33;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.2px;
+        }
+        .scenario-card p {
+            margin: 0.4rem 0;
+            color: #3f3932;
+        }
+        .scenario-card .tag {
+            display: inline-block;
+            background: #f1ebe1;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #6b5a48;
+            margin-right: 0.6rem;
+            margin-top: 0.4rem;
+        }
+
+        /* 说明区 / 引用块 */
+        .notice-box {
+            background: #f9f3e8;
+            padding: 1.5rem 2rem;
+            border-left: 5px solid #b58d66;
+            border-radius: 16px;
+            margin: 2.5rem 0;
+            font-size: 0.98rem;
+            color: #3e372f;
+        }
+        .notice-box strong {
+            color: #5f4b34;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin: 2.8rem 0 1.5rem;
+        }
+        .faq-mini h2 {
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: #3a322a;
+            margin-bottom: 1rem;
+        }
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px dashed #ddd4c5;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: #4a3f33;
+        }
+        .faq-a {
+            color: #4f4940;
+            margin-left: 0.3rem;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2d6c4;
+            font-size: 0.9rem;
+            color: #6f6456;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 660px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .top-nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 1rem;
+                border-radius: 32px;
+            }
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .scenario-card {
+                padding: 1.3rem 1.2rem;
+            }
+            .notice-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="nav-brand">站点·指南</span>
+        <div class="nav-links">
+            <a href="#about">介绍</a>
+            <a href="#scenarios">场景</a>
+            <a href="#faq">常见说明</a>
+        </div>
+    </nav>
+
+    <!-- hero 介绍 -->
+    <section class="hero" id="about">
+        <h1>关于爱游戏体育 · 信息说明</h1>
+        <p>
+            下面整理了与 <a href="https://site-aigamesport.com">爱游戏体育</a> 相关的基本介绍、适用场景以及一些常见疑问。
+            内容力求清晰平实，不夸大也不省略，方便快速了解站点定位与基础信息。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <div class="card-grid" id="scenarios">
+        <div class="scenario-card">
+            <h3>⚙️ 信息聚合与参考</h3>
+            <p>
+                网站汇聚了体育项目、赛事动态以及相关资讯内容，适合日常浏览体育新闻或关注特定项目进展。
+                页面结构以分类导航为主，便于按兴趣方向查看。
+            </p>
+            <span class="tag">赛事资讯</span>
+            <span class="tag">项目分类</span>
+        </div>
+
+        <div class="scenario-card">
+            <h3>📱 移动端适配浏览</h3>
+            <p>
+                针对手机与平板设备做了响应式调整，阅读列表、图文展示均能适配不同屏幕。
+                无论使用何种设备，均可顺利查看排名、赛程或简要分析内容。
+            </p>
+            <span class="tag">响应式</span>
+            <span class="tag">多端可用</span>
+        </div>
+
+        <div class="scenario-card">
+            <h3>🔍 数据与动态概览</h3>
+            <p>
+                通过列表、卡片等形式展示近期比赛结果、队伍数据及热点新闻。
+                适合快速浏览总览性信息，也支持进一步点开了解详细内容。
+            </p>
+            <span class="tag">数据概览</span>
+            <span class="tag">动态更新</span>
+        </div>
+    </div>
+
+    <!-- 引用块 / 提示框：可信说明 -->
+    <div class="notice-box">
+        <strong>📌 可信说明</strong><br>
+        本页仅为介绍性汇总，内容来源于公开资料整理，不构成任何投资或博彩建议。
+        站点 <a href="https://site-aigamesport.com">爱游戏体育</a> 主要提供体育相关内容展示，建议用户结合自身判断与多方信息进行参考。
+    </div>
+
+    <!-- 常见说明 FAQ 摘要 -->
+    <section class="faq-mini" id="faq">
+        <h2>常见说明 · 摘要</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">❓ 网站主要包含哪些内容？</div>
+            <div class="faq-a">主要涵盖体育新闻、赛事数据、队伍信息以及部分项目介绍，分类浏览较为清晰。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 需要注册或登录才能浏览吗？</div>
+            <div class="faq-a">大部分内容可直接查看，部分功能或深度数据可能需要简单注册，以网站实际要求为准。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 信息更新频率如何？</div>
+            <div class="faq-a">常规赛事期间保持每日更新，休赛期或低密度时段更新节奏会相应放缓，但仍保持内容维护。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 如何确认信息的准确性？</div>
+            <div class="faq-a">建议将本站数据与官方体育机构或权威媒体进行交叉比对，以获取更全面的判断依据。</div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        — 本页为介绍性汇总 · 与 <a href="https://site-aigamesport.com">爱游戏体育</a> 关联 —
+    </div>
+
+</body>
+</html>
