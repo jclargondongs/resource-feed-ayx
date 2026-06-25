@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 日常查询与延伸阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafaf9;
+            color: #1c1c1c;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .page {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 2.4rem 1.5rem 3rem;
+        }
+
+        /* hero */
+        .hero {
+            padding: 1.8rem 0 2.8rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 460;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 0.6rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: #4a4a4a;
+            max-width: 540px;
+        }
+
+        /* section */
+        section {
+            margin: 3rem 0;
+        }
+        section h2 {
+            font-size: 1.4rem;
+            font-weight: 420;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #e0ddd9;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.4rem;
+            color: #2c2c2c;
+        }
+
+        /* 优势卡片 —— 留白、窄圆角 */
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #edeae5;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            transition: background 0.15s;
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 450;
+            margin-bottom: 0.3rem;
+            color: #1e1e1e;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #4b4b4b;
+        }
+        .card:hover {
+            background: #f6f5f1;
+        }
+
+        /* 说明区 + 场景 */
+        .note-text {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 1.2rem;
+        }
+        .note-text a {
+            color: #2b5c8a;
+            text-decoration: none;
+            border-bottom: 1px solid #cbdae9;
+            transition: border-color 0.2s;
+        }
+        .note-text a:hover {
+            border-bottom-color: #2b5c8a;
+        }
+
+        /* FAQ 摘要 (极简列表) */
+        .faq-list {
+            list-style: none;
+        }
+        .faq-list li {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #ece8e2;
+        }
+        .faq-list li:last-child {
+            border-bottom: none;
+        }
+        .faq-list strong {
+            font-weight: 470;
+            color: #1f1f1f;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .faq-list span {
+            font-size: 0.95rem;
+            color: #4e4e4e;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0ddd9;
+            font-size: 0.85rem;
+            color: #6b6b6b;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
+        .footer-note a {
+            color: #5a5a5a;
+            text-decoration: none;
+            border-bottom: 0.5px solid #cbc8c2;
+        }
+        .footer-note a:hover {
+            color: #1c1c1c;
+            border-bottom-color: #1c1c1c;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .page {
+                padding: 1.8rem 1rem 2.4rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .card {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区 -->
+    <header class="hero">
+        <h1>日常查询 · 对照 · 延伸阅读</h1>
+        <p>从一次检索、一段对比，到某个话题的稍深入浏览——信息整理本就是缓慢的累积。我们围绕游戏内容做了一些基础工作，方便你随时查阅。</p>
+    </header>
+
+    <!-- 优势区：几个简短卡片 -->
+    <section>
+        <h2>这样整理</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>条目对照</h3>
+                <p>版本、机制、细节差异——并列呈现，减少反复跳转。</p>
+            </div>
+            <div class="card">
+                <h3>延伸索引</h3>
+                <p>在一条信息附近，常能找到相关条目或简短注记，利于连读。</p>
+            </div>
+            <div class="card">
+                <h3>轻量浏览</h3>
+                <p>页面结构以文字为主，加载直接，适合随时打开又随时关闭的节奏。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：从日常查询和延伸阅读的角度切入 -->
+    <section>
+        <h2>作为工具页</h2>
+        <p class="note-text">
+            很多时候我们打开一个页面，只是为了快速确认某个名字、某段描述，或者把一个说法和另一个放在一起看。<a href="https://feed-ayx.com.cn">爱游戏</a>的内容组织方式偏向这种“随手查”的习惯——没有太多装饰，条目之间留有对照空间。
+        </p>
+        <p class="note-text">
+            也适合在阅读过程里稍作停留：比如看到一条简讯，旁边可能就链接着背景介绍或后续资料。这些延伸并不密集，更多是留个入口，按需翻阅。
+        </p>
+    </section>
+
+    <!-- FAQ 摘要（3—4 条，自然叙述） -->
+    <section>
+        <h2>常被问到的几点</h2>
+        <ul class="faq-list">
+            <li>
+                <strong>内容会频繁更新吗？</strong>
+                <span>会做阶段性整理，但并非每日刷新。适合参考和回溯，不适合追即时资讯。</span>
+            </li>
+            <li>
+                <strong>条目来源是哪里？</strong>
+                <span>选自公开资料、社区整理及个人阅读笔记，每条尽量保留原出处的影子，方便你判断。</span>
+            </li>
+            <li>
+                <strong>移动端体验如何？</strong>
+                <span>窄列排版，字号和间距针对手机阅读做过微调，横竖屏都可以直接使用。</span>
+            </li>
+            <li>
+                <strong>可以转载或引用吗？</strong>
+                <span>页面内容多数为整合性叙述，建议以原始出处为准。若使用，注明链接即可。</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-note">
+        <span><a href="https://feed-ayx.com.cn">爱游戏</a> · 查询对照</span>
+        <span>无采集 · 无诱导</span>
+    </div>
+
+</div>
+</body>
+</html>
